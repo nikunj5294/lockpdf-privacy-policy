@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy – PDF Lock Free</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #050518;
+    --surface: rgba(255,255,255,0.04);
+    --border: rgba(100,80,255,0.18);
+    --blue: #7AA8FF;
+    --purple: #8B40FF;
+    --text: #ffffff;
+    --muted: rgba(255,255,255,0.55);
+    --faint: rgba(255,255,255,0.28);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* Background glow */
+  body::before {
+    content: '';
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 10% 10%, rgba(122,168,255,0.12) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 50% at 88% 80%, rgba(139,64,255,0.10) 0%, transparent 70%);
+  }
+
+  .wrap { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  /* Nav */
+  nav {
+    border-bottom: 1px solid var(--border);
+    background: rgba(5,5,24,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    position: sticky; top: 0; z-index: 100;
+  }
+  nav .wrap { display: flex; align-items: center; gap: 6px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+  nav a {
+    color: var(--muted); text-decoration: none; font-size: 13px; font-weight: 500;
+    padding: 5px 11px; border-radius: 20px; transition: all .2s;
+  }
+  nav a:hover { color: var(--text); background: rgba(255,255,255,0.07); }
+  nav a.active { color: var(--blue); background: rgba(122,168,255,0.1); }
+  nav .logo { display: flex; align-items: center; gap: 8px; margin-right: auto; text-decoration: none; }
+  nav .logo-icon {
+    width: 30px; height: 30px; border-radius: 8px;
+    background: linear-gradient(135deg, var(--blue), var(--purple));
+    display: flex; align-items: center; justify-content: center; font-size: 16px;
+  }
+  nav .logo-text { font-size: 14px; font-weight: 700; color: var(--text); }
+
+  /* Header */
+  header { padding: 60px 0 40px; text-align: center; }
+  header .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 700; letter-spacing: .6px; text-transform: uppercase;
+    color: var(--blue); background: rgba(122,168,255,0.1);
+    border: 1px solid rgba(122,168,255,0.25); border-radius: 20px;
+    padding: 5px 14px; margin-bottom: 20px;
+  }
+  header h1 {
+    font-size: clamp(28px, 5vw, 40px); font-weight: 800; letter-spacing: -.5px;
+    background: linear-gradient(135deg, #fff 30%, rgba(255,255,255,.6));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 14px;
+  }
+  header p { color: var(--muted); font-size: 15px; }
+  .updated { display: inline-block; margin-top: 10px; font-size: 13px; color: var(--faint); }
+
+  /* Content */
+  main { padding-bottom: 80px; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 28px 30px;
+    margin-bottom: 16px;
+  }
+
+  .card h2 {
+    font-size: 17px; font-weight: 700; color: var(--text);
+    display: flex; align-items: center; gap: 10px; margin-bottom: 14px;
+  }
+  .card h2 .icon {
+    width: 32px; height: 32px; border-radius: 9px; flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(122,168,255,.25), rgba(139,64,255,.25));
+    display: flex; align-items: center; justify-content: center; font-size: 15px;
+  }
+
+  .card p, .card li { color: var(--muted); font-size: 15px; margin-bottom: 10px; }
+  .card p:last-child, .card li:last-child { margin-bottom: 0; }
+  .card ul { padding-left: 18px; }
+  .card li { margin-bottom: 6px; }
+
+  .highlight {
+    background: rgba(122,168,255,0.07);
+    border: 1px solid rgba(122,168,255,0.18);
+    border-radius: 12px; padding: 14px 18px; margin: 14px 0;
+    color: rgba(255,255,255,0.8); font-size: 14px;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .highlight .hi { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+  a { color: var(--blue); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 30px 0; text-align: center;
+    color: var(--faint); font-size: 13px;
+  }
+  footer a { color: var(--muted); margin: 0 10px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#" class="logo">
+      <div class="logo-icon">🔒</div>
+      <span class="logo-text">PDF Lock Free</span>
+    </a>
+    <a href="https://nikunj5294.github.io/lockpdf-privacy-policy/pdf_lock_free_privacy.html" class="active">Privacy Policy</a>
+    <a href="https://nikunj5294.github.io/lockpdf-privacy-policy/pdf_lock_free_terms.html">Terms &amp; Conditions</a>
+    <a href="https://nikunj5294.github.io/lockpdf-privacy-policy/pdf_lock_free_contact.html">Contact Us</a>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header>
+    <div class="badge">📄 Legal</div>
+    <h1>Privacy Policy</h1>
+    <p>We built PDF Lock Free to respect your privacy. Here's exactly what we do — and don't — do with your data.</p>
+    <span class="updated">Last updated: June 2026</span>
+  </header>
+
+  <main>
+
+    <div class="card">
+      <h2><span class="icon">🛡️</span> The Short Version</h2>
+      <div class="highlight">
+        <span class="hi">✅</span>
+        <span>Your PDF files are <strong>processed entirely on your device</strong> and are <strong>never uploaded</strong> to any server. We do not sell, share, or monetise your data.</span>
+      </div>
+      <p>PDF Lock Free is a utility app that unlocks and password-protects PDF files on-device. We collect minimal data, and only what's necessary to improve the app and process in-app purchases.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">📁</span> Your PDF Files</h2>
+      <p>All PDF processing (removing passwords, adding passwords) happens <strong>locally on your device</strong> using iOS's built-in PDFKit framework.</p>
+      <ul>
+        <li>PDF files are <strong>never uploaded</strong> to our servers or any third-party server.</li>
+        <li>Processed files are saved temporarily in your device's app storage and can be exported by you.</li>
+        <li>PDF history files are stored in your device's local Documents folder only.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">💬</span> Feedback You Send</h2>
+      <p>When you use the "Send Feedback" feature, the message you type and your optional reply email address are stored in <strong>Firebase Firestore</strong> (Google's cloud database).</p>
+      <ul>
+        <li>This data is used solely to read and respond to your feedback.</li>
+        <li>Feedback is accessible only to the app developer.</li>
+        <li>You may request deletion of your feedback by emailing us at <a href="mailto:nikunjit5294@gmail.com">nikunjit5294@gmail.com</a>.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">🔔</span> App Updates (Remote Config)</h2>
+      <p>We use <strong>Firebase Remote Config</strong> to deliver app configuration, including minimum required version checks (force update). This service may collect anonymous usage metadata as described in <a href="https://firebase.google.com/support/privacy" target="_blank">Google's Firebase Privacy Policy</a>.</p>
+      <p>No personally identifiable information is transmitted via Remote Config.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">💳</span> Subscriptions &amp; Purchases</h2>
+      <p>In-app purchases and subscriptions are processed entirely by <strong>Apple's App Store</strong> via StoreKit. We do not receive or store your payment information, credit card details, or Apple ID.</p>
+      <ul>
+        <li>We store a purchase status flag and usage counters (unlock count, page count) in your device's <strong>Keychain</strong>.</li>
+        <li>Keychain data stays on your device and persists through app reinstalls to prevent free-limit bypass.</li>
+        <li>Subscription management is handled in your iOS Settings → Apple ID → Subscriptions.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">📊</span> Analytics &amp; Advertising</h2>
+      <p>PDF Lock Free does <strong>not</strong> use any third-party analytics SDKs (no Google Analytics, Firebase Analytics, Mixpanel, Amplitude, etc.).</p>
+      <p>We do <strong>not</strong> show advertisements and do not share data with advertising networks.</p>
+      <p>We do <strong>not</strong> track you across other apps or websites.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">👶</span> Children's Privacy</h2>
+      <p>PDF Lock Free is not directed at children under 13. We do not knowingly collect personal information from children. If you believe a child has submitted personal information through the feedback form, please contact us and we will delete it promptly.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">🔄</span> Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by updating the "Last updated" date above. Continued use of the app after changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="icon">📬</span> Contact Us</h2>
+      <p>If you have questions about this Privacy Policy or want to request deletion of your data, please reach out:</p>
+      <p><strong>Email:</strong> <a href="mailto:nikunjit5294@gmail.com">nikunjit5294@gmail.com</a></p>
+      <p>We aim to respond within 2–3 business days.</p>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 PDF Lock Free. All rights reserved.</p>
+    <p style="margin-top:10px;">
+      <a href="https://nikunj5294.github.io/lockpdf-privacy-policy/pdf_lock_free_privacy.html">Privacy Policy</a>
+      <a href="https://nikunj5294.github.io/lockpdf-privacy-policy/pdf_lock_free_terms.html">Terms &amp; Conditions</a>
+      <a href="https://nikunj5294.github.io/lockpdf-privacy-policy/pdf_lock_free_contact.html">Contact Us</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
